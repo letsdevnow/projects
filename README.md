@@ -3,3 +3,4 @@
 - **Cinema rest service** - REST service based on Spring Framework (reservation and returning of seats).
 - **Car sharing** - Program with command line interface. H2 database is used for storing data (JDBC).
 - **Contacts** - Program with command line interface. Demonstrate serialization and deserialization into file (as data storage), polymorphism principle. JUnit is used for automation of unit testing.
+- **Client Server Concurrent** - Client and server agent. Server agent is able to process request in concurrent mode. Data is transferring between clietns and server in JSON format.
