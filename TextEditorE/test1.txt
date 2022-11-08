@@ -1,0 +1,13 @@
+Alternatively, we can use \Q and \E to escape the special character. \Q indicates that all
+characters up to \E needs to be escaped and \E means we need to end the escaping that was started with \Q.
+
+This just means that whatever is in between \Q and \E would be escaped.
+
+In the test shown here, the split() of the String class does a match using the regular expression provided to it.
+
+Our requirement is to split the input string by the pipe (|) character into words. Therefore, we use a regular
+expression pattern to do so.
+
+The pipe character is a metacharacter that needs to be escaped in the regular expression.
+
+Here, the escaping is done by placing the pipe character between \Q and \E:
