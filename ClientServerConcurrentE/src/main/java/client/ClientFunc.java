@@ -14,20 +14,23 @@ import java.net.Socket;
 import java.util.Objects;
 
 public class ClientFunc {
-    final String ADDRESS = "127.0.0.1";
-    final int PORT = 23456;
-
-    Socket socket;
-    DataInputStream dataInputStream;
-    DataOutputStream dataOutputStream;
-
+    private final String address;
+    private final int port;
+    private Socket socket;
+    private DataInputStream dataInputStream;
+    private DataOutputStream dataOutputStream;
     @Getter
-    boolean connected = false;
+    private boolean connected = false;
+
+    public ClientFunc(String address, int port) {
+        this.address = address;
+        this.port = port;
+    }
 
     //connect to server
     public boolean connect() {
         try {
-            socket = new Socket(InetAddress.getByName(ADDRESS), PORT);
+            socket = new Socket(InetAddress.getByName(address), port);
             dataInputStream = new DataInputStream(socket.getInputStream());
             dataOutputStream  = new DataOutputStream(socket.getOutputStream());
             connected = true;

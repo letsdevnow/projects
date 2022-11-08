@@ -6,9 +6,17 @@ import java.util.Scanner;
 import static client.Main.println;
 
 public class Menu {
+    private final String address;
+    private final int port;
     private final Scanner sc = new Scanner(System.in);
-    private final ClientFunc clientFunc = new ClientFunc();
+    private final ClientFunc clientFunc;
     boolean toExit = false;
+
+    public Menu(String address, int port) {
+        this.address = address;
+        this.port = port;
+        clientFunc = new ClientFunc(address, port);
+    }
 
     //main menu
     public void showMainMenu() {

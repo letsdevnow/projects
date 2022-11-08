@@ -2,13 +2,13 @@ package client;
 import lombok.Getter;
 
 public class Main {
-    private final static String REQUEST_FILE_PATH = "\\src\\resources\\data\\client\\";
+    private final static String ADDRESS = "127.0.0.1";
+    private final static int PORT = 23456;
 
     public static void main (String[] args) {
         System.out.println("Client started");
-        Menu menu = new Menu();
+        Menu menu = new Menu(ADDRESS, PORT);
         menu.showMainMenu();
-
     }
 
     public static void println(String str) {
